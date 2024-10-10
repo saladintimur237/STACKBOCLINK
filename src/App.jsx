@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
         <Routes>
-          <Route path="/testthu" element={<NotFound/>} />
+          <Route path="/details/:id" element={<NotFound/>} />
         </Routes>
     </BrowserRouter>
   );
