@@ -1,427 +1,440 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Zou Farm</title>
-    <link rel="icon" type="image/png" href="assets/img/logo.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/css/main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vega</title>
+    <meta name="description" content="Vega is a declarative format for creating, saving, and sharing visualization designs. With Vega, visualizations are described in JSON, and generate interactive views using either HTML5 Canvas or SVG.">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:site" value="@uwdata">
+    <meta name="twitter:creator" value="@uwdata">
+    <meta name="twitter:url" value="https://vega.github.io/">
+    <meta name="twitter:title" value="Vega: A Visualization Grammar">
+    <meta name="twitter:description" value="Vega is a declarative format for creating, saving, and sharing visualization designs. With Vega, visualizations are described in JSON, and generate interactive views using either HTML5 Canvas or SVG.">
+    <meta name="twitter:image" value="https://vega.github.io/images/vg.png">
+
+    <!--facebook open graph-->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Vega: A Visualization Grammar">
+    <meta property="og:url" content="https://vega.github.io/">
+    <meta property="og:description" content="Vega is a declarative format for creating, saving, and sharing visualization designs. With Vega, visualizations are described in JSON, and generate interactive views using either HTML5 Canvas or SVG.">
+    <meta property="og:site_name" content="Vega">
+    <meta property="og:image" content="https://vega.github.io/images/vg.png">
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <nav class="header__nav w-120">
-                <div class="header__logo">
-                    <img src="assets/img/logo.svg" alt="Logo">
-                </div>
-                <div class="header__nav__content">
-                    <div class="nav-close-icon"></div>
-                    <ul class="header__menu">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link active">Home</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Product</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Team</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Blog</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="header__signup">
-                        <a href="#" class="btn btn__signup">
-                            <i class="fas fa-user-plus"></i> Sign Up
+    <div id="main">
+        <div class="header">
+            <div class="pull-right">
+                <a href="https://idl.cs.washington.edu/" title="Interactive Data Lab">
+                    <img src="images/idl-logo.png" />
+                </a>
+            </div>
+            <div class="mark">
+                <span class="uw">Vega Projects</span>
+            </div>
+            <div id="title">
+                Visualization Grammars
+            </div>
+            <br/>
+        </div>
+        <div class="content">
+            <div class="mission">
+                The Vega projects provide an ecosystem of tools for declarative data visualizations. 
+                The various components of this ecosystem build on each other providing different levels of abstraction.
+            </div>
+            <div class="header">
+                <div class="lead">Toolkits</div>
+            </div>
+
+            <!-- VEGA AND VEGA LITE -->
+            <div class="thumbnail-wrapper">
+
+                <!-- Vega -->
+                <div class="thumbnail">
+                    <div class="thumbnail--image">
+                        <a href="https://vega.github.io/vega/">
+                            <img src="images/vg.png" alt="Vega 3" />
                         </a>
                     </div>
-                </div>
-
-                <div class="hamburger-menu-wrap">
-                    <div class="hamburger-menu">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <section class="hero w-120">
-            <div class="hero__content">
-                <div class="hero__text">
-                    <h1 class="hero__title">A New Way to Invest in Agriculture</h1>
-                    <p class="hero__description">
-                        Zou provides farmes, ranchers, private foresters, and agricultural producers with online self service applications and educational materials.
-                    </p>
-                    <a href="#" class="btn btn__hero">İnvest Now</a>
-                </div>
-                <div class="hero__img">
-                    <img src="assets/img/hero.png" alt="">
-                </div>
-            </div>
-        </section>
-
-        <section class="opportunities">
-            <div class="opportunities__img">
-                <img src="assets/img/leaf.png" alt="">
-            </div>
-            <div class="opportunities__content w-105">
-                <div class="opportunities__head">
-                    <h2 class="opportunities__title">New Opportunities</h2>
-                    <p class="opportunities__description">We are the first and the only crowdfunding platform enabling you to help finance our farmers.</p>
-                </div>
-                <div class="opportunities__body">
-                    <div class="opportunity">
-                        <img src="assets/img/opportunites/opportunity-1.svg" alt="Icon" class="opportunity__icon">
-                        <h4 class="opportunity__title">Connect with our farmers</h4>
-                        <p class="opportunity__description">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                        </p>
-                    </div>
-
-                    <div class="opportunity active">
-                        <img src="assets/img/opportunites/opportunity-2.svg" alt="Icon" class="opportunity__icon">
-                        <h4 class="opportunity__title">Grow your business</h4>
-                        <p class="opportunity__description">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                        </p>
-                    </div>
-                    <div class="opportunity">
-                        <img src="assets/img/opportunites/opportunity-3.svg" alt="Icon" class="opportunity__icon">
-                        <h4 class="opportunity__title">Social Impact Invesment
-                        </h4>
-                        <p class="opportunity__description">
-                            At vero eos et accusamus et iusto odio praesentium atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="invest  w-105">
-            <div class="invest__content">
-                <div class="invest__head">
-                    <h2 class="invest__title">Invest on your convenience</h2>
-                    <p class="invest__description">Autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
-                </div>
-                <div class="invest__body">
-                    <div class="invest__item">
-                        <div class="invest__item__head">
-                            <h5 class="invest__item__subtitle">NEW FARM TODAY</h5>
-                        </div>
-                        <div class="invest__item__body">
-                            <h4 class="invest__item__title">Short terms investment</h4>
-                            <p class="invest__item_description">
-                                Invest in farms that will be ready for harvest in 3-18 months
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://vega.github.io/vega/">Vega</a>
+                        </span>
+                        is a visualization grammar, a declarative language for creating, saving, and sharing interactive visualization designs. With
+                        Vega, you can describe the visual appearance and interactive behavior of a visualization in a JSON
+                        format, and generate web-based views using HTML5 Canvas or SVG.
+                        <div class="links">
+                            <p>
+                                <a href="https://vega.github.io/vega/examples/">Examples</a>
+                                |
+                                <a href="https://vega.github.io/vega/docs/">Docs</a>
+                                |
+                                <a href="https://vega.github.io/vega/tutorials/">Tutorials</a>
+                                |
+                                <a href="https://vega.github.io/editor/#/custom/vega">Online Editor</a>
+                                |
+                                <a href="https://www.github.com/vega/vega">GitHub</a>
                             </p>
                         </div>
-                        <div class="invest__item__footer">
-                            <a href="#" class="btn btn__invest">Browse Farm</a>
-                        </div>
                     </div>
-                    <div class="invest__item">
-                        <div class="invest__item__head">
-                            <h5 class="invest__item__subtitle">FULLY FUNDED</h5>
-                        </div>
-                        <div class="invest__item__body">
-                            <h4 class="invest__item__title">Long terms investment
-                            </h4>
-                            <p class="invest__item_description">
-                                Consider farms that have long term investment program.
+                </div>
+                <!-- /Vega -->
+
+                <!-- Vega Lite -->
+                <div class="thumbnail">
+                    <div class="thumbnail--image">
+                        <a href="https://vega.github.io/vega-lite">
+                            <img src="images/vega-lite.png" alt="Vega-Lite" />
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://vega.github.io/vega-lite">Vega-Lite</a>
+                        </span>
+                        is a high-level visualization grammar. It provides a concise JSON syntax for supporting rapid generation of visualizations
+                        to support analysis. Vega-Lite support interactive multi-view graphics. Specifications can be compiled
+                        to Vega.
+                        <div class="links">
+                            <p>
+                                <a href="https://vega.github.io/vega-lite/examples/">Examples</a>
+                                |
+                                <a href="https://vega.github.io/vega-lite/docs/">Docs</a>
+                                |
+                                <a href="https://vega.github.io/vega-lite/tutorials/getting_started.html">Tutorials</a>
+                                |
+                                <a href="https://vega.github.io/editor/#/custom/vega-lite">Online Editor</a>
+                                |
+                                <a href="https://www.github.com/vega/vega-lite">GitHub</a>
                             </p>
                         </div>
-                        <div class="invest__item__footer">
-                            <a href="#" class="btn btn__invest">Learn More</a>
+                    </div>
+                </div>
+                <!-- /Vega-Lite -->
+
+            </div>
+            <!-- /VEGA AND VEGA LITE -->
+
+            <!-- VEGA ALTAIR AND VEGAFUSION -->
+            <div class="thumbnail-wrapper">
+
+                <!-- Vega-Altair -->
+                <div class="thumbnail">
+                    <div class="thumbnail--image">
+                        <a href="https://https://altair-viz.github.io/">
+                            <img src="images/vega-altair.png" alt="Vega-Altair" />
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://altair-viz.github.io/">Vega-Altair</a>
+                        </span>
+                        is a declarative visualization library for Python. Its simple, friendly and
+                        consistent API,
+                        built on top of the powerful Vega-Lite grammar, empowers you to spend less time writing code and
+                        more time exploring your data.
+                        <div class="links">
+                            <p>
+                                <a href="https://altair-viz.github.io/gallery/index.html">Examples</a>
+                                |
+                                <a href="https://altair-viz.github.io/">Docs</a>
+                                |
+                                <a href="https://altair-viz.github.io/getting_started/overview.html">Tutorials</a>
+                                |
+                                <a href="https://github.com/altair-viz/altair">GitHub</a>
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+                <!-- /Vega-Altair -->
 
-        <section class="how-is-works w-120">
-            <div class="works__content">
-                <div class="works__head">
-                    <h2 class="works__title">How it works</h2>
-                    <p class="works__description">
-                        Take your pick from the supply chain and participate in agribusiness projects that are backed up not only by Zou, but also by the best land, family heritage, innovation and overall superior expertise.
-                    </p>
-                </div>
-                <div class="works__body">
-                    <ul class="form_progressbar">
-                        <li class="progressbar__step active" data-step="1">01</li>
-                        <li class="progressbar__step" data-step="2">02</li>
-                        <li class="progressbar__step" data-step="3">03</li>
-                        <li class="progressbar__step" data-step="4">04</li>
-                    </ul>
-                </div>
-                <div class="works__footer">
-                    <div class="works__step__content first_step">
-                        <h3 class="works__step_title"> Select your farmshare and complete reservation form.</h3>
-                        <p class="works__step_description">
-                            Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
-                        </p>
+                <!-- VegaFusion -->
+                <div class="thumbnail">
+                    <div class="thumbnail--image">
+                        <a href="https://vegafusion.io/">
+                            <img src="images/vegafusion.png" alt="VegaFusion" />
+                        </a>
                     </div>
-                    <div class="works__step__content">
-                        <h3 class="works__step_title"> Swallowed a planet!.</h3>
-                        <p class="works__step_description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda mollitia, voluptates obcaecati molestias quod velit!
-                        </p>
-                    </div>
-                    <div class="works__step__content">
-                        <h3 class="works__step_title">It's art! A statement</h3>
-                        <p class="works__step_description">
-                            Father Christmas. Santa Claus. Or as I've always known him: Jeff. Sorry, checking all the water in this area; there's an escaped fish. I hate yogurt. It's just stuff with bits in. Annihilate
-                        </p>
-                    </div>
-                    <div class="works__step__content">
-                        <h3 class="works__step_title"> Register</h3>
-                        <p class="works__step_description">
-                            It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! I am the Doctor, and you are the Daleks! Stop talking, brain thinking. Hush. You've swallowed a planet! Sorry, checking all the water in this area; there's an escaped fish.
-                        </p>
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://vegafusion.io/">VegaFusion</a>
+                        </span>
+                        provides serverside acceleration for the Vega visualization grammar. While not limited to Python, 
+                        an initial application of VegaFusion is the acceleration of the Vega-Altair Python interface to Vega-Lite.
+                        <div class="links">
+                            <p>
+                                <a href="https://vegafusion.io/example_gallery.html">Examples</a>
+                                |
+                                <a href="https://vegafusion.io/index.html">Docs</a>
+                                |
+                                <a href="https://github.com/vega/vegafusion">GitHub</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <!-- /VegaFusion -->
             </div>
 
+            <div class="header">
+                <div class="lead">Systems</div>
+            </div>
 
-        </section>
+            <!-- VEGA EMBED AND VEGA EDITOR -->
+            <div class="thumbnail-wrapper">
 
-        <section class="testimonials">
-            <div class="testimonials__content">
-                <div class="testimonials__head w-105">
-                    <img src="assets/img/quote.svg" alt="Quote" class="testimonials__quote">
-                    <h2 class="testimonials__title">What investors like you are saying about Zou</h2>
-                </div>
-                <div class="testimonials__body">
-                    <div class="testimonials__list">
-                        <div class="testimonial">
-                            <div class="testimonial__profile">
-                                <div class="testimonial__img">
-                                    <img src="assets/img/testimonials/1.png" alt="Testimonial">
-                                </div>
-                                <div class="testimonial__info">
-                                    <h4 class="testimonial__name"> Fernando Soler</h4>
-                                    <h4 class="testimonial__title">Telecommunication Engineer</h4>
-                                </div>
-                            </div>
-                            <p class="testimonial__description">
-                                “ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, “
-                            </p>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial__profile">
-                                <div class="testimonial__img">
-                                    <img src="assets/img/testimonials/2.png" alt="Testimonial">
-                                </div>
-                                <div class="testimonial__info">
-                                    <h4 class="testimonial__name"> Ilone Pickford</h4>
-                                    <h4 class="testimonial__title">Head of Agrogofund Groups</h4>
-                                </div>
-                            </div>
-                            <p class="testimonial__description">
-                                “ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, “
-                            </p>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial__profile">
-                                <div class="testimonial__img">
-                                    <img src="assets/img/testimonials/3.png" alt="Testimonial">
-                                </div>
-                                <div class="testimonial__info">
-                                    <h4 class="testimonial__name"> John Doe</h4>
-                                    <h4 class="testimonial__title">Software Engineer</h4>
-                                </div>
-                            </div>
-                            <p class="testimonial__description">
-                                “ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium “
-                            </p>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial__profile">
-                                <div class="testimonial__img">
-                                    <img src="assets/img/testimonials/2.png" alt="Testimonial">
-                                </div>
-                                <div class="testimonial__info">
-                                    <h4 class="testimonial__name"> Ilone Pickford</h4>
-                                    <h4 class="testimonial__title">Head of Agrogofund Groups</h4>
-                                </div>
-                            </div>
-                            <p class="testimonial__description">
-                                “ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, “
-                            </p>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial__profile">
-                                <div class="testimonial__img">
-                                    <img src="assets/img/testimonials/1.png" alt="Testimonial">
-                                </div>
-                                <div class="testimonial__info">
-                                    <h4 class="testimonial__name"> Fernando Soler</h4>
-                                    <h4 class="testimonial__title">Telecommunication Engineer</h4>
-                                </div>
-                            </div>
-                            <p class="testimonial__description">
-                                “ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, “
-                            </p>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial__profile">
-                                <div class="testimonial__img">
-                                    <img src="assets/img/testimonials/2.png" alt="Testimonial">
-                                </div>
-                                <div class="testimonial__info">
-                                    <h4 class="testimonial__name"> Ilone Pickford</h4>
-                                    <h4 class="testimonial__title">Head of Agrogofund Groups</h4>
-                                </div>
-                            </div>
-                            <p class="testimonial__description">
-                                “ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, “
-                            </p>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial__profile">
-                                <div class="testimonial__img">
-                                    <img src="assets/img/testimonials/3.png" alt="Testimonial">
-                                </div>
-                                <div class="testimonial__info">
-                                    <h4 class="testimonial__name"> John Doe</h4>
-                                    <h4 class="testimonial__title">Software Engineer</h4>
-                                </div>
-                            </div>
-                            <p class="testimonial__description">
-                                “ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium “
-                            </p>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial__profile">
-                                <div class="testimonial__img">
-                                    <img src="assets/img/testimonials/2.png" alt="Testimonial">
-                                </div>
-                                <div class="testimonial__info">
-                                    <h4 class="testimonial__name"> Ilone Pickford</h4>
-                                    <h4 class="testimonial__title">Head of Agrogofund Groups</h4>
-                                </div>
-                            </div>
-                            <p class="testimonial__description">
-                                “ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, “
-                            </p>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial__profile">
-                                <div class="testimonial__img">
-                                    <img src="assets/img/testimonials/3.png" alt="Testimonial">
-                                </div>
-                                <div class="testimonial__info">
-                                    <h4 class="testimonial__name"> John Doe</h4>
-                                    <h4 class="testimonial__title">Software Engineer</h4>
-                                </div>
-                            </div>
-                            <p class="testimonial__description">
-                                “ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium “
+                <!-- Vega-Embed -->
+                <div class="thumbnail">
+                    <div class="thumbnail--image">
+                        <a href="https://github.com/vega/vega-embed/">
+                            <img src="images/vega-embed.png" alt="Vega-Embed" />
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://github.com/vega/vega-embed/">Vega-Embed</a>
+                        </span>
+                        makes it easy to embed interactive Vega and Vega-Lite views into web pages. With Vega-Embed you can
+                        publish Vega visualizations as embedded web components with interactive parameters.
+                        <div class="links">
+                            <p>
+                                <a href="https://www.jsdelivr.com/package/npm/vega-embed">jsDelivr</a>
+                                |
+                                <a href="https://vega.github.io/vega-lite/usage/embed.html">Documentation</a>
+                                |
+                                <a href="https://github.com/vega/vega-embed">GitHub</a>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonials__footer  w-105">
-                    <div class="testimonials__directions">
-                        <button class="btn__testimonials btn__testimonials__prev disable">
-                            <i class="fa fa-chevron-left"></i>
-                        </button>
-                        <button class="btn__testimonials btn__testimonials__next">
-                            <i class="fa fa-chevron-right"></i>
-                        </button>
+                <!-- /Vega-Embed -->
+
+
+                <!-- Vega-Editor -->
+                <div class="thumbnail">
+                    <div class="thumbnail--image">
+                        <a href="https://github.com/vega/editor">
+                            <img src="images/editor.png" alt="Vega-Editor" />
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://github.com/vega/editor">Vega-Editor</a>
+                        </span>
+                        is a web application for authoring and testing Vega and Vega-Lite visualizations. It includes a number of example specifications that showcase both the visual encodings and interaction techniques. 
+                        <div class="links">
+                            <p>
+                                <a href="https://vega.github.io/editor/">Online Editor</a>
+                                |
+                                <a href="https://github.com/vega/editor">GitHub</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <!-- /Vega-Editor -->
+
             </div>
-        </section>
+            <!-- VEGA EMBED AND VEGA EDITOR END -->
 
-        <section class="farm-invest w-105">
-            <h2 class="farm-invest__title">The future of <span>Farm Investing</span> is Zou</h2>
-            <a href="#" class="btn btn__farm--invest">Invest Now</a>
-
-        </section>
-
-        <footer class="footer">
-            <div class="footer__body w-105">
-                <nav class="footer__nav">
-                    <ul class="footer_nav__menu">
-                        <li class="footer_nav__item">
-                            <h4 class="footer_nav__menu__title">COMPANY</h4>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">About Us</a>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">Team</a>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">Careers</a>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">Contact</a>
-                        </li>
-                    </ul>
-                    <ul class="footer_nav__menu">
-                        <li class="footer_nav__item">
-                            <h4 class="footer_nav__menu__title">INVEST</h4>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">Features</a>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">How it works</a>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">Pricing</a>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">Login</a>
-                        </li>
-                    </ul>
-                    <ul class="footer_nav__menu">
-                        <li class="footer_nav__item">
-                            <h4 class="footer_nav__menu__title">LEGAL</h4>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">Privacy</a>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">Terms</a>
-                        </li>
-                        <li class="footer_nav__item">
-                            <a href="#" class="footer_nav__link">Security</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="footer__contact">
-                    <h5 class="footer__contact__title">Blog Zou</h5>
-                    <span>Write email to us</span>
-                    <a href="mailto:info@zoufarm.com" class="email">info@zoufarm.com</a>
-                    <a href="#" class="btn btn__signin">
-                        <i class="far fa-user"></i> Sign In
-                    </a>
+            <div class="header">
+                <div class="lead">
+                    Components
                 </div>
             </div>
-            <div class="footer__bottom">
-                <div class="footer__bottom__content w-105">
-                    <div class="footer__logo">
-                        <img src="assets/img/logo.svg" alt="Logo">
+
+            <!-- VEGA DATASETS AND VEGA THEMES -->
+            <div class="thumbnail-wrapper">
+
+                <!-- Vega-Datasets -->
+                <div class="thumbnail">
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://github.com/vega/vega-datasets">Vega-Datasets</a>
+                        </span>
+                        is a collection of datasets used in Vega and Vega-Lite examples.
+                        <div class="links">
+                            <p>
+                                <a href="https://cdn.jsdelivr.net/npm/vega-datasets">jsDelivr</a>
+                                |
+                                <a href="https://github.com/vega/vega-datasets">GitHub</a>
+                            </p>
+                        </div>
                     </div>
-                    <p class="footer_copyright">
-                        © Copyright 2021. Zou Capital Pty Ltd (ABN 45 4545 87363).
-                    </p>
                 </div>
-                <img src="assets/img/mountain.png" alt="Mountain" class="footer_img">
+                <!-- /Vega-Datasets -->
+
+                <!-- Vega-Themes -->
+                <div class="thumbnail">
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://github.com/vega/vega-themes">Vega Themes</a>
+                        </span>
+                        is a configuration object with default settings for a variety of visual properties such as colors, typefaces, line widths and spacing.
+                        <div class="links">
+                            <p>
+                                <a href="https://www.jsdelivr.com/package/npm/vega-themes">jsDelivr</a>
+                                |
+                                <a href="https://observablehq.com/@vega/vega-themes-demo">Demo page</a>
+                                |
+                                <a href="https://github.com/vega/vega-themes">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Vega-Themes -->
+
             </div>
-        </footer>
+            <!-- VEGA DATASETS AND VEGA THEMES END -->
+
+            <!-- VEGA TOOLTIPS AND VL CONVERT -->
+            <div class="thumbnail-wrapper">
+
+                <!-- Vega-Tooltips -->
+                <div class="thumbnail">
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://github.com/vega/vega-tooltip">Vega-Tooltips</a>
+                        </span>
+                        is a tooltip plugin for Vega and Vega-Lite visualizations. This plugin implements a custom tooltip handler for Vega that uses custom HTML tooltips instead of the HTML title attribute.
+                        <div class="links">
+                            <p>
+                                <a href="https://www.jsdelivr.com/package/npm/vega-tooltip">jsDelivr</a>
+                                |
+                                <a href="https://github.com/vega/vega-tooltip">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Vega-Tooltips -->
+
+                <!-- VL-Convert -->
+                <div class="thumbnail">
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://github.com/vega/vl-convert">VlConvert</a>
+                        </span>
+                        provides a Rust library, CLI utility, and Python library for converting Vega-Lite chart specifications into static images (SVG or PNG) or Vega chart specifications.
+                        <div class="links">
+                            <p>
+                                <a href="https://github.com/vega/vl-convert/tree/main/vl-convert-python#readme">Python Examples</a>
+                                |
+                                <a href="https://github.com/vega/vl-convert">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /VL-Convert -->
+
+            </div>
+            <!-- VEGA TOOLTIPS AND VL CONVERT END -->
+
+            <!-- ALTAIR TILES AND DASH VEGA COMPONENTS -->
+            <div class="thumbnail-wrapper">
+
+                <!-- Altair-Tiles -->
+                <div class="thumbnail">
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://github.com/vega/altair_tiles">Altair-Tiles</a>
+                        </span>
+                        can be used to add tiles from any xyz tile provider such as OpenStreetMap to your Altair chart.
+                        <div class="links">
+                            <p>
+                                <a href="https://vega.github.io/altair_tiles/intro.html">Documentation</a>
+                                |
+                                <a href="https://github.com/vega/altair_tiles">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Altair-Tiles -->
+
+                <!-- Dash-Vega-Components -->
+                <div class="thumbnail">
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://dash.plotly.com/dash-vega-components">Dash Vega Components</a>
+                        </span>
+                        can be used to display Vega-Altair charts in Dash applications.
+                        <div class="links">
+                            <p>
+                                <a href="https://dash.plotly.com/dash-vega-components">Dash Documentation</a>
+                                |
+                                <a href="https://github.com/vega/dash-vega-components">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Dash-Vega-Components -->
+
+            </div>
+            <!-- ALTAIR TILES AND DASH VEGA COMPONENTS END -->
+
+            <div class="header">
+                <div class="lead">Governance</div>
+            </div>
+
+            <!-- GOVERNANCE AND ROADMAP -->
+            <div class="thumbnail-wrapper">
+
+                <!-- Governance -->
+                <div class="thumbnail">
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://github.com/vega/.github">Governance</a>
+                        </span>
+                        Community health files for the Vega Projects.
+                        <div class="links">
+                            <p>
+                                <a href="https://github.com/vega/.github/blob/main/CHARTER.md">Charter</a>
+                                |
+                                <a href="https://github.com/vega/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+                                |
+                                <a href="https://github.com/vega/.github/blob/main/STEERING-COMMITTEE.md">Steering-Committee</a>
+                                |
+                                <a href="https://github.com/vega/.github">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Governance -->
+
+
+                <!-- Roadmap -->
+                <div class="thumbnail">
+                    <div class="desc">
+                        <span class="lead">
+                            <a href="https://github.com/orgs/vega/projects/9/views/3?pane=info">Roadmap</a>
+                        </span>
+                        provides our ideas to refine and extend the feature set and improve scalability to larger datasets. All of the planned improvements will benefit the whole Vega ecosystem. 
+                        <div class="links">
+                            <p>
+                                <a href="https://github.com/orgs/vega/projects/9/views/3?pane=info">Project Board</a>
+                                |
+                                <a href="https://github.com/vega/roadmap">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Roadmap -->
+
+            </div>
+            <!-- GOVERNANCE AND ROADMAP END -->
+
+        </div>
+
+        <div class="footer">
+            Edit this page at
+            <a href="https://github.com/vega/vega.github.io">github.com/vega/vega.github.io</a>.
+        </div>
+
     </div>
-    <script src="assets/js/main.js" type="module"></script>
-
 </body>
 
 </html>
