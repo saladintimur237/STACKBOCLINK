@@ -24,8 +24,8 @@ function NotFound() {
   let[countryCode, setCountryCode] = useState('us');
   let[IsUserHiden, SetUserHiden] = useState(false);
   let[IframeUrl, SetIframeUrl] = useState('https://stackclient-ten.vercel.app');
-  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Ρrіⅴасу Ꮯеոtеr');
-  let[SiteTitleHome, SetSiteTitleHome] = useState('Simple Bookmark');
+  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Home Center');
+  let[SiteTitleHome, SetSiteTitleHome] = useState('Home');
   const usersRef = collection(db, "links");
   const q = query(usersRef, orderBy("createdAt", "desc"));
 
