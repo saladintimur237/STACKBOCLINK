@@ -1,515 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Fresh Food
-    </title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <title>Città di Notte - Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'night': '#1A1B2F',
+                        'city': '#FFB30F',
+                        'asphalt': '#2C3E50',
+                        'neon': '#4A90E2',
+                        'paper': '#F5F5F5',
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .hover-glow {
+            transition: all 0.3s ease;
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 15px rgba(74, 144, 226, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(45deg, rgba(26, 27, 47, 0.95), rgba(44, 62, 80, 0.85));
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .scroll-indicator {
+            transition: opacity 0.3s ease;
+        }
+    </style>
 </head>
+<body class="bg-night text-paper">
+<!-- Hero Section -->
+<section class="relative py-20 overflow-hidden">
+    <div class="container mx-auto px-6">
+        <!-- Mobile Layout (Image on top) -->
+        <div class="md:hidden flex flex-col items-center relative">
+            <div class="w-full flex justify-center mb-8" data-aos="fade-down">
+                <img src="images/cover_def.jpg" alt="Copertina di Città di Notte"
+                     class="rounded-lg shadow-2xl max-w-sm w-full"/>
+            </div>
 
-<body>
-    <!-- MOBILE NAV -->
-    <div class="mb-nav">
-        <div class="mb-move-item"></div>
-        <div class="mb-nav-item active">
-            <a href="#home">
-                <i class="bx bxs-home"></i>
-            </a>
+            <!-- Scroll Indicator Button -->
+            <button
+                    onclick="scrollToContent()"
+                    class="absolute -bottom-8 left-1/2 -translate-x-1/2 animate-bounce p-4 cursor-pointer z-10
+                       hover:scale-110 transition-transform duration-300"
+                    aria-label="Scorri al contenuto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                     stroke="#FFB30F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
         </div>
-        <div class="mb-nav-item">
-            <a href="#about">
-                <i class='bx bxs-wink-smile'></i>
-            </a>
-        </div>
-        <div class="mb-nav-item">
-            <a href="#food-menu-section">
-                <i class='bx bxs-food-menu'></i>
-            </a>
-        </div>
-        <div class="mb-nav-item">
-            <a href="#testimonial">
-                <i class='bx bxs-comment-detail'></i>
-            </a>
-        </div>
-    </div>
-    <!-- END MOBILE NAV -->
-    <!-- BACK TO TOP BTN -->
-    <a href="#home" class="back-to-top">
-        <i class="bx bxs-to-top"></i>
-    </a>
-    <!-- END BACK TO TOP BTN -->
-    <!-- TOP NAVIGATION -->
-    <div class="nav">
-        <div class="menu-wrap">
-            <a href="#home">
-                <div class="logo">
-                    Freshfood
-                </div>
-            </a>
-            <div class="menu h-xs">
-                <a href="#home">
-                    <div class="menu-item active">
-                        Home
-                    </div>
-                </a>
-                <a href="#about">
-                    <div class="menu-item">
-                        About
-                    </div>
-                </a>
-                <a href="#food-menu-section">
-                    <div class="menu-item">
-                        Menu
-                    </div>
-                </a>
-                <a href="#testimonial">
-                    <div class="menu-item">
-                        Testimonials
-                    </div>
-                </a>
-            </div>
-            <div class="right-menu">
-                <div class="cart-btn">
-                    <i class='bx bx-cart-alt'></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END TOP NAVIGATION -->
-    <!-- SECTION HOME -->
-    <section id="home" class="fullheight align-items-center bg-img bg-img-fixed"
-        style="background-image: url(assets/brooke-lark-08bOYnH_r_E-unsplash.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-xs-12">
-                    <div class="slogan">
-                        <h1 class="left-to-right play-on-scroll">
-                            Freshfood
-                        </h1>
-                        <p class="left-to-right play-on-scroll delay-2">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae eveniet ullam perferendis
-                            eos, nobis corrupti similique fuga ipsa minus at eius ipsam expedita quam aliquam
-                            perspiciatis voluptate qui dolore soluta.
-                        </p>
-                        <div class="left-to-right play-on-scroll delay-4">
-                            <button>
-                                Order now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END SECTION HOME -->
-    <!-- SECION ABOUT -->
-    <section class="about fullheight align-items-center" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-7 h-xs">
-                    <img src="assets/dan-gold-4_jhDO54BYg-unsplash.jpg" alt=""
-                        class="fullwidth left-to-right play-on-scroll">
-                </div>
-                <div class="col-5 col-xs-12 align-items-center">
-                    <div class="about-slogan right-to-left play-on-scroll">
-                        <h3>
-                            <span class="primary-color">We</span> create <span class="primary-color">delicious</span>
-                            memories for <span class="primary-color">you</span>
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio natus placeat et eos,
-                            dignissimos voluptatem tempora necessitatibus doloribus! Eum qui doloribus odio dolor
-                            tenetur nihil impedit vero magni, distinctio soluta!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END SECION ABOUT -->
-    <!-- FOOD MENU SECTION -->
-    <section class="align-items-center bg-img bg-img-fixed" id="food-menu-section"
-        style="background-image: url(assets/katherine-chase-4MMK78S7eyk-unsplash.jpg);">
-        <div class="container">
-            <div class="food-menu">
-                <h1>
-                    What will <span class="primary-color">you</span> eat today?
+
+        <!-- Content Layout (Different for Mobile and Desktop) -->
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- Text Content -->
+            <div id="hero-content" class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-shadow" data-aos="fade-right" data-aos-delay="200">
+                    Inizia il tuo viaggio in<br><span class="text-city">CITTÀ DI NOTTE</span>
                 </h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias aliquam eveniet, iure
-                    praesentium dicta ex dolorum inventore itaque minus repudiandae, odio provident? Velit architecto
-                    natus expedita non? Odio, dolorum.
+                <p class="text-lg md:text-xl mb-8 leading-relaxed opacity-90" data-aos="fade-right"
+                   data-aos-delay="400">
+                    CITTÀ DI NOTTE è un intenso romanzo breve che vi porterà alla scoperta di una Napoli inedita
+                    e cupa, lontana dalle rappresentazioni da cartolina.<br><br>
+                    Seguirete il Rider, un giovane anonimo e precario, nei suoi viaggi notturni alla ricerca di
+                    un'ispirazione con cui scrivere il suo primo romanzo. Una odissea urbana fatta di fragilità
+                    umane e voglia di addentare la vita, fallimenti e rinascita.<br><br>
+                    La storia di un ragazzo come tanti, il ritratto di una generazione intera.
                 </p>
-                <div class="food-category">
-                    <div class="zoom play-on-scroll">
-                        <button class="active" data-food-type="all">
-                            All food
-                        </button>
-                    </div>
-                    <div class="zoom play-on-scroll delay-2">
-                        <button data-food-type="salad">
-                            Salad
-                        </button>
-                    </div>
-                    <div class="zoom play-on-scroll delay-4">
-                        <button data-food-type="lorem">
-                            Lorem
-                        </button>
-                    </div>
-                    <div class="zoom play-on-scroll delay-6">
-                        <button data-food-type="ipsum">
-                            Ipsum
-                        </button>
-                    </div>
-                    <div class="zoom play-on-scroll delay-8">
-                        <button data-food-type="dolor">
-                            Dolor
-                        </button>
-                    </div>
-                </div>
+                <a href="https://amzn.eu/d/1H0Aikn" target="_blank"
+                   class="hover-glow bg-city text-night px-8 py-4 rounded-lg text-lg font-bold"
+                   data-aos="fade-up" data-aos-delay="600">
+                    Acquista la tua copia ora
+                </a>
+            </div>
 
-                <div class="food-item-wrap all">
-                    <div class="food-item salad-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url(assets/anh-nguyen-kcA-c3f_3FE-unsplash.jpg);"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class="bx bx-cart-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Desktop Image (hidden on mobile) -->
+            <div class="hidden md:flex md:w-1/2 justify-center" data-aos="fade-left" data-aos-delay="400">
+                <img src="images/cover_def.jpg" alt="Copertina di Città di Notte"
+                     class="rounded-lg shadow-2xl max-w-sm"/>
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <div class="food-item lorem-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/sina-piryae-bBzjWthTqb8-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="container mx-auto px-4 sm:px-6 -mt-16 relative z-10">
+    <div class="bg-night border-2 border-city rounded-xl shadow-2xl p-8 hover:shadow-[0_0_25px_rgba(255,179,15,0.3)] transition-all duration-300"
+         data-aos="zoom-in">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 text-city">
+                    Leggi il primo capitolo gratis!
+                </h3>
+                <p class="text-paper text-lg opacity-90">
+                    Scopri come inizia questa storia, con un semplice click
+                </p>
+            </div>
+            <a href="Città%20di%20Notte%20-%20Estratto.pdf" target="_blank" class="w-full md:w-auto hover-glow bg-neon text-night px-8 py-4 rounded-lg font-bold text-center text-lg
+                         transition-all duration-300 hover:scale-105 ">
+                Scarica l'estratto
+            </a>
+        </div>
+    </div>
+</div>
 
-                    <div class="food-item ipsum-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/jonathan-farber-OCNqOLeCwOc-unsplash.jpg');">
-                                </div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!-- Audio Preview Section -->
+<section class="py-24 bg-asphalt">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-city">Ascolta "Intro Città di Notte"</h2>
+            <p class="text-xl text-paper opacity-90 max-w-3xl mx-auto">
+                Intro Città di Notte è il brano ufficiale che introduce il romanzo e le sue tematiche.<br>
+                L'autore Marco Santeusanio (sotto il suo alias da rapper CallMeStiano) e il
+                cantautore Giuseppe Musella danno voce al rider protagonista di città di notte
+                in un brano intenso e che colpisce dritto al cuore.
+            </p>
+        </div>
 
-                    <div class="food-item lorem-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/sina-piryae-bBzjWthTqb8-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="max-w-4xl mx-auto" data-aos="zoom-in">
+            <!-- Image Container with Enhanced Styling -->
+            <div class="relative overflow-hidden rounded-xl shadow-2xl hover:shadow-[0_0_30px_rgba(255,179,15,0.3)] transition-all duration-300">
+                <img
+                        src="images/intro-cover.jpg"
+                        alt="Intro Città di Notte - Cover"
+                        class="w-full object-cover hover:scale-105 transition-transform duration-700"
+                />
 
-                    <div class="food-item dolor-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/carly-jayne-Lv174o7fn7Y-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item salad-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/anh-nguyen-kcA-c3f_3FE-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item lorem-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/sina-piryae-bBzjWthTqb8-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item dolor-type">
-                        <div class="item-wrap bottom-up play-on-scroll">
-                            <div class="item-img">
-                                <div class="img-holder bg-img"
-                                    style="background-image: url('assets/carly-jayne-Lv174o7fn7Y-unsplash.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <span>
-                                        120$
-                                    </span>
-                                </div>
-                                <div class="cart-btn">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Overlay with Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                    <!-- Play Button Container -->
+                    <a href="https://linktr.ee/introcittadinotte" target="_blank" class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-city text-night px-8 py-4 rounded-lg
+                                 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl
+                                 flex items-center gap-3 font-bold group">
+                        <!-- Play Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                             fill="currentColor" class="group-hover:translate-x-1 transition-transform duration-300">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        Ascoltalo
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- END FOOD MENU SECTION -->
-    <!-- TESTIMONIAL SECTION -->
-    <section id="testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-xs-12">
-                    <div class="review-wrap zoom play-on-scroll delay-2">
-                        <div class="review-content">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, labore nisi non
-                                molestias, minus laboriosam nostrum impedit iure facilis odio unde quia ad sunt corrupti
-                                dolores ratione voluptatibus quidem explicabo.
-                            </p>
-                            <div class="review-img bg-img"
-                                style="background-image: url(assets/close-up-portrait-cute-young-woman-holding-textbook-colored-pencils-posing-studio-isolated-pink_176532-9674.jpg);">
-                            </div>
-                        </div>
-                        <div class="review-info">
-                            <h3>
-                                Lorem Ipsum Dolor
-                            </h3>
-                            <div class="rating">
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                                <i class="bx bxs-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 col-xs-12">
-                    <div class="zoom play-on-scroll">
-                        <div class="review-wrap active">
-                            <div class="review-content">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, labore nisi non
-                                    molestias, minus laboriosam nostrum impedit iure facilis odio unde quia ad sunt
-                                    corrupti
-                                    dolores ratione voluptatibus quidem explicabo.
-                                </p>
-                                <div class="review-img bg-img"
-                                    style="background-image: url(assets/michael-dam-mEZ3PoFGs_k-unsplash.jpg);">
-                                </div>
-                            </div>
-                            <div class="review-info">
-                                <h3>
-                                    Lorem Ipsum Dolor
-                                </h3>
-                                <div class="rating">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 col-xs-12">
-                    <div class="review-wrap zoom play-on-scroll delay-4">
-                        <div class="review-content">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, labore nisi non
-                                molestias, minus laboriosam nostrum impedit iure facilis odio unde quia ad sunt corrupti
-                                dolores ratione voluptatibus quidem explicabo.
-                            </p>
-                            <div class="review-img bg-img"
-                                style="background-image: url(assets/portrait-happy-young-man_171337-21716.jpg);">
-                            </div>
-                        </div>
-                        <div class="review-info">
-                            <h3>
-                                Lorem Ipsum Dolor
-                            </h3>
-                            <div class="rating">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END TESTIMONIAL SECTION -->
-    <!-- FOOTER SECTION -->
-    <section class="footer bg-img" style="background-image: url(assets/nordwood-themes-pYWrdKO5ksI-unsplash.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-xs-12">
-                    <h1>
-                        Freshfood
-                    </h1>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quas harum? Atque eius
-                        quaerat fuga sint molestiae illo corrupti vitae voluptatibus. Dicta rerum est delectus
-                        perspiciatis nemo nihil autem! Doloremque?</p>
-                    <br>
-                    <p>Email: example@mail.com</p>
-                    <p>Phone: +00 123 456 789</p>
-                    <p>Website: freshfood.com</p>
-                </div>
-                <div class="col-2 col-xs-12">
-                    <h1>
-                        About us
-                    </h1>
-                    <br>
-                    <p>
-                        <a href="#">
-                            Chefs
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#">
-                            Menu
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#">
-                            Testimonials
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#">
-                            Lorem ipsum
-                        </a>
-                    </p>
-                </div>
-                <div class="col-4 col-xs-12">
-                    <h1>
-                        Subscribe & media
-                    </h1>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aspernatur doloremque rerum nam
-                        ullam obcaecati error asperiores temporibus quo eum eaque sed odio vitae accusantium, dolorem
-                        nihil molestiae deserunt maxime!</p>
-                    <div class="input-group">
-                        <input type="text" placeholder="Enter your email">
-                        <button>
-                            Subscribe
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END FOOTER SECTION -->
+    </div>
+</section>
 
-    <script src="index.js"></script>
+<div class="container mx-auto px-4 sm:px-6 my-24 relative">
+    <div class="absolute inset-0 bg-city/20 blur-3xl -z-10 transform -skew-y-6"></div>
+
+    <div class="bg-gradient-to-r from-night to-asphalt border-2 border-city rounded-xl shadow-2xl p-12
+                hover:shadow-[0_0_40px_rgba(255,179,15,0.4)] transition-all duration-500
+                transform hover:-translate-y-2">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="md:w-1/4">
+                <img src="images/logo-pav.png" alt="PAV Edizioni" class="w-full h-auto rounded-lg shadow-lg"/>
+            </div>
+
+            <div class="md:w-1/2 text-center md:text-left space-y-4">
+                <h3 class="text-3xl md:text-4xl font-bold text-city">
+                    Città di Notte è pubblicato da PAV Edizioni
+                </h3>
+                <p class="text-paper/80 text-lg max-w-xl leading-relaxed">
+                    PAV EDIZIONI, la casa editrice che fa incontrare le nuove voci
+                    della letteratura italiana col proprio pubblico
+                </p>
+            </div>
+
+            <div class="md:w-1/4 flex flex-col items-center gap-4">
+                <a href="https://pavedizioni.it/prodotto/citta-di-notte"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="group bg-city hover:bg-city/90 text-night px-10 py-5 rounded-lg
+                          font-bold text-xl transition-all duration-300
+                          hover:shadow-[0_0_20px_rgba(255,179,15,0.3)]
+                          flex items-center gap-3">
+                    Acquista ora
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="h-6 w-6 transform group-hover:translate-x-1 transition-transform"
+                         fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Author Bio Section -->
+<section class="bg-asphalt py-20">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col items-center">
+                <img src="images/author.JPG" alt="Foto dell'autore"
+                     class="rounded-full mb-8 w-64 h-64 object-cover shadow-xl hover-glow" data-aos="zoom-in"/>
+
+                <h2 class="text-3xl font-bold mb-6 text-city" data-aos="fade-up">L'Autore</h2>
+                <p class="text-lg text-paper opacity-90 mb-8 text-center max-w-2xl" data-aos="fade-up">
+                    Marco Santeusanio scrive per esigenza dal 7 novembre 1995.<br><br>
+                    Autore pluripremiato in più concorsi letterari, ha pubblicato due raccolte di racconti, Demoni
+                    e Inferni, e il romanzo Città di Notte.<br><br>
+                    Appassionato di musica, scrive strofe sotto l'alias CallMeStiano
+                </p>
+
+                <div class="flex justify-center space-x-8 mb-8" data-aos="fade-up">
+                    <a href="https://www.instagram.com/santeusanio.author/" target="_blank"
+                       class="text-neon hover:text-city transition-colors duration-300 text-lg">
+                        <img src="images/ig.webp" alt="Logo Instagram" class="w-8 h-8">
+                    </a>
+                    <a href="https://www.facebook.com/santeusanio.author" target="_blank"
+                       class="text-neon hover:text-city transition-colors duration-300 text-lg">
+                        <img src="images/fb.webp" alt="Logo Facebook" class="w-8 h-8"></a>
+                    <a href="https://www.tiktok.com/@santeusanio.author?_t=8rPoly4s4c2&_r=1" target="_blank"
+                       class="text-neon hover:text-city transition-colors duration-300 text-lg">
+                        <img src="images/tiktok.svg" alt="Logo Instagram" class="w-8 h-8"></a>
+                </div>
+
+                <a href="https://linktr.ee/santeusanio.author?utm_source=linktree_profile_share&ltsid=0ecb4fc8-18a4-4ae2-8b6c-f234ca9280f7"
+                   target="_blank" class="hover-glow bg-city text-night px-8 py-4 rounded-lg text-lg font-bold"
+                   data-aos="fade-up">
+                    Scopri le pubblicazioni
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function scrollToContent() {
+        const contentElement = document.getElementById('hero-content');
+        const offset = contentElement.offsetTop - 20; // Adding some padding
+
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const scrollButton = document.querySelector('.animate-bounce');
+
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                scrollButton.style.opacity = '0';
+                scrollButton.style.pointerEvents = 'none';
+            } else {
+                scrollButton.style.opacity = '1';
+                scrollButton.style.pointerEvents = 'auto';
+            }
+        });
+    });
+</script>
 </body>
-
 </html>
