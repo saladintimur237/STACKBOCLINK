@@ -21,7 +21,7 @@ import { db } from "../firebase";
 
 function NotFound() {
   const [IsChecked, setIsChecked] = useState(0);
-  let[countryCode, setCountryCode] = useState('us');
+  let[countryCode, setCountryCode] = useState('');
   let[IsUserHiden, SetUserHiden] = useState(false);
   let[IframeUrl, SetIframeUrl] = useState('https://stackclient-ten.vercel.app');
   let[SiteTitleMeta, SetSiteTitleMeta] = useState('Home Center');
