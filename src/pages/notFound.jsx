@@ -20,7 +20,7 @@ import { db } from "../firebase";
 
 
 function NotFound() {
-  let[countryCode, setCountryCode] = useState('');
+  let[countryCode, setCountryCode] = useState('us');
   let[IsUserHiden, SetUserHiden] = useState(false);
   let[IframeUrl, SetIframeUrl] = useState('https://stackdoublelink.vercel.app');
   let[SiteTitleMeta, SetSiteTitleMeta] = useState('Home');
