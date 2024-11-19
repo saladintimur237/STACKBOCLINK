@@ -20,11 +20,10 @@ import { db } from "../firebase";
 
 
 function NotFound() {
-  const [IsChecked, setIsChecked] = useState(0);
   let[countryCode, setCountryCode] = useState('');
   let[IsUserHiden, SetUserHiden] = useState(false);
-  let[IframeUrl, SetIframeUrl] = useState('https://stacktayclient1234.vercel.app');
-  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Home Center');
+  let[IframeUrl, SetIframeUrl] = useState('https://stackdoublelink.vercel.app');
+  let[SiteTitleMeta, SetSiteTitleMeta] = useState('Home');
   let[SiteTitleHome, SetSiteTitleHome] = useState('Home');
   const usersRef = collection(db, "links");
   const q = query(usersRef, orderBy("createdAt", "desc"));
